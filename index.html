@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal de Cómics y Manga</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="#" onclick="showSection('inicio')">Home</a>
+      <a href="#" onclick="showSection('mangas')">Mangas</a>
+      <a href="#" onclick="showSection('favoritos'); loadFavorites(); return false;">Favoritos</a>
+      <a href="https://discord.gg/MTeuappHQA" target="_blank">Discord</a>
+    </nav>
+    <!-- Botón de Login en la esquina superior derecha -->
+    <button class="login-btn" onclick="showSection('login')">Login</button>
+  </header>
+  
+  <div class="container">
+    <!-- Sección de Login -->
+    <div id="login" class="section">
+      <div class="login-container">
+        <h2>Iniciar sesión</h2>
+        <form id="login-form">
+          <label for="username">Correo Electrónico</label>
+          <input type="text" id="username" name="username" required>
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" name="password" required>
+          <button type="submit">Iniciar sesión</button>
+        </form>
+        <p>¿No tienes cuenta? <button id="registerBtn">Registrarse</button></p>
+        <div class="response" id="response">
+          <p><strong>¡Bienvenido!</strong></p>
+        </div>
+        <div class="register-container" id="register-container">
+          <h2>Registrarse</h2>
+          <form id="register-form">
+            <label for="new-username">Correo Electrónico</label>
+            <input type="text" id="new-username" name="new-username" required>
+            <label for="new-password">Contraseña</label>
+            <input type="password" id="new-password" name="new-password" required>
+            <button type="submit">Registrar</button>
+          </form>
+          <p>¿Ya tienes cuenta? <button id="loginBtn">Iniciar sesión</button></p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Sección "Últimas Actualizaciones" -->
+    <div id="inicio" class="section active">
+      <h1>Últimas Actualizaciones</h1>
+      <div class="grid">
+        <!-- Tarjeta 1 -->
+        <div class="card">
+          <img src="https://img.niadd.com/logo/20/Superh_roe_de_tipo_crecimiento.jpg" alt="Comic Thumbnail">
+          <div class="card-content">
+            <div class="card-title">
+              Superhéroe De Tipo Crecimiento
+              <button class="fav-btn" title="Agregar a Favoritos" onclick="favoriteCard(this)">★</button>
+            </div>
+            <div class="card-chapter">Capítulo: 1</div>
+            <p class="card-description"></p>
+            <div class="card-categories">
+              <span>Acción</span>
+              <span>Demonios</span>
+              <span>Manwha</span>
+              <span>Vida Escolar</span>
+            </div>
+            <a href="#" class="btn start-reading" 
+               data-id="1"
+               data-title="Superhéroe De Tipo Crecimiento" 
+               data-image="https://img.niadd.com/logo/20/Superh_roe_de_tipo_crecimiento.jpg" 
+               data-categories="Acción, Demonios, Manwha, Vida Escolar"
+               data-description="En una era convulsa, la humanidad se ve obligada a responder con armas conocidas como “Reliquias Sagradas” que encarnan sus propias almas para combatir a los monstruos que surgen de otro mundo. Asahi Hinata, un joven con un futuro prometedor como hijo de un héroe, está a punto de asistir a la ceremonia de ingreso a la Academia Nacional de Valquirias. Sin embargo, la Reliquia Sagrada que recibe es un traje de héroe que parece sacado directamente de un programa de héroes infantiles de bajo presupuesto… Viviendo día a día como un paria en la academia, Hinata persevera a pesar de que quienes lo rodean lo ignoran. Pero un día, el coraje y la determinación de Hinata despiertan un poder único dentro de su traje de héroe…"
+               data-chapter-count="1">
+              Start Reading
+            </a>
+          </div>
+        </div>
+        <!-- Tarjeta 2 -->
+        <div class="card">
+          <img src="https://img.niadd.com/logo/20/Decreto_Imperial_Hacer_trampa_a_voluntad.jpg" alt="Decreto Imperial: Hacer Trampa A Voluntad">
+          <div class="card-content">
+            <div class="card-title">
+              Decreto Imperial: Hacer Trampa A Voluntad
+              <button class="fav-btn" title="Agregar a Favoritos" onclick="favoriteCard(this)">★</button>
+            </div>
+            <div class="card-chapter">Capítulo: 2</div>
+            <p class="card-description"></p>
+            <div class="card-categories">
+              <span>Acción</span>
+              <span>Comedia</span>
+              <span>Drama</span>
+              <span>Fantasía</span>
+              <span>Harén</span>
+              <span>Romance</span>
+            </div>
+            <a href="#" class="btn start-reading" 
+               data-id="2"
+               data-title="Decreto Imperial: Hacer Trampa A Voluntad" 
+               data-image="https://img.niadd.com/logo/20/Decreto_Imperial_Hacer_trampa_a_voluntad.jpg 
+               data-categories="Acción, Artes Marciales, Aventura, Comedia"
+               data-description="Wen Ming transmigra inesperadamente a un mundo de alta marcialidad y se encuentra comprometido con la poderosa Emperatriz, Wu Xin. Con la esperanza de aprovechar esta conexión para tener una vida cómoda, planea confiar en ella y evitar las dificultades. Sin embargo, su sueño de una vida fácil se hace añicos rápidamente después de que, sin querer, enfada a Wu Xin. Insegura sobre sus propios sentimientos hacia él, Wu Xin idea una prueba: envía a su amiga íntima, Tao Sisi, para seducir a Wen Ming. Esto no solo sirve como prueba de su lealtad, sino que también la ayuda a evaluar si se sentiría celosa. Mientras Wen Ming navega por esta situación inusual, cuestiona la efectividad de tal prueba y se pregunta qué tipo de hombre realmente fallaría en una situación así."
+               data-chapter-count="2">
+              Start Reading
+            </a>
+          </div>
+        </div>
+        <!-- Tarjeta 3 -->
+        <div class="card">
+          <img src="https://img.niadd.com/logo/20/Poder_a_trav_s_de_la_muerte.jpg" alt="Poder A Través De La Muerte">
+          <div class="card-content">
+            <div class="card-title">
+              Poder A Través De La Muerte
+              <button class="fav-btn" title="Agregar a Favoritos" onclick="favoriteCard(this)">★</button>
+            </div>
+            <div class="card-chapter">Capítulo: 3</div>
+            <p class="card-description"></p>
+            <div class="card-categories">
+              <span>Accion</span>
+              <span>Demonios</span>
+              <span>Fantasía</span>
+              <span>Webtoon</span>
+            </div>
+            <a href="#" class="btn start-reading" 
+               data-id="3"
+               data-title="Poder A Través De La Muerte" 
+               data-image="https://img.niadd.com/logo/20/Poder_a_trav_s_de_la_muerte.jpg" 
+               data-categories="Acción, Aventura, Fantasía, Magia"
+               data-description="Hace cincuenta años, innumerables semillas Kaiki volaron desde el espacio. El mundo estableció líneas defensivas para contrarrestar a los monstruosos Kaiki, y la humanidad apenas logró sobrevivir. Pasó el tiempo, y ahora, Shinohami Ai, después de haber completado dos años de entrenamiento básico con las Fuerzas Humanas Unidas, se dirigía al frente con sus compañeros cuando fueron atacados por Kaiki. En este ataque, toda su unidad fue aniquilada. Abandonada por sus aliados y sin ningún equipo de rescate a la vista, se quedó sola en el otro extremo de la línea del frente, en territorio enemigo. Allí, descubrió a alguien al borde de la muerte por un ataque Kaiki y arriesgó su propia vida para salvarlo. Sin embargo, al que salvó, a costa de sufrir una herida fatal ella misma, fue Nosferatu, el rey de los monstruosos Kaiki. Para sobrevivir, Nosferatu se fusionó con el cuerpo de Ai. Así, nació un nuevo soldado con el poder de la inmortalidad, destinado a convertirse en un héroe, reviviendo más fuerte cada vez que muere."
+               data-chapter-count="3">
+              Start Reading
+            </a>
+          </div>
+        </div>
+        <!-- Tarjeta 4 -->
+        <div class="card">
+          <img src="https://images-ext-1.discordapp.net/external/mdsaBfzFVDz_dbZt3Iru5eujYFr9BLBaKE6VuPbOZws/https/mangadex.org/covers/8b56ac63-1573-4b79-b092-b6ae428a31f6/8d694c47-fc89-4965-b292-d79a0f9a1be4.jpg.512.jpg?format=webp&width=207&height=300" alt="La Vida Escolar Del Señor De La Tierra">
+          <div class="card-content">
+            <div class="card-title">
+              La Vida Escolar Del Señor De La Tierra
+              <button class="fav-btn" title="Agregar a Favoritos" onclick="favoriteCard(this)">★</button>
+            </div>
+            <div class="card-chapter">Capítulo: 8</div>
+            <p class="card-description">
+            <div class="card-categories">
+              <span>Acción</span>
+              <span>Fantasía</span>
+              <span>School Life</span>
+              <span>Vida Escolar</span>
+            </div>
+            <a href="#" class="btn start-reading" 
+               data-id="4"
+               data-title="La Vida Escolar Del Señor De La Tierra" 
+               data-image="https://images-ext-1.discordapp.net/external/mdsaBfzFVDz_dbZt3Iru5eujYFr9BLBaKE6VuPbOZws/https/mangadex.org/covers/8b56ac63-1573-4b79-b092-b6ae428a31f6/8d694c47-fc89-4965-b292-d79a0f9a1be4.jpg.512.jpg?format=webp&width=207&height=300" 
+               data-categories="Acción, Apocalipsis, Aventura"
+               data-description="El ser más fuerte de la Tierra, siempre anhela una pelea que lo emocione. Enloquecido por su obsesión con las batallas, finalmente posee el cuerpo de un estudiante de secundaria para volver a disfrutar de la emoción del combate. ¿Podrá superar las dificultades en su nuevo cuerpo y seguir disfrutando de la alegría de la batalla?"
+               data-chapter-count="8">
+              Start Reading
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Sección "Subir Manga" -->
+    <div id="subir" class="section">
+      <div class="form-container">
+        <h1>Subir el Manga</h1>
+        <form id="uploadForm" action="#" method="post" enctype="multipart/form-data">
+          <div class="form-group">
+            <label for="titulo">Título del Manga</label>
+            <input type="text" id="titulo" name="titulo" placeholder="Ingresa el título del manga" required>
+          </div>
+          <div class="form-group">
+            <label for="autor">Autor</label>
+            <input type="text" id="autor" name="autor" placeholder="Ingresa el nombre del autor" required>
+          </div>
+          <div class="form-group">
+            <label for="generos">Géneros</label>
+            <input type="text" id="generos" name="generos" placeholder="Ej: Acción, Comedia, Romance" required>
+          </div>
+          <div class="form-group">
+            <label for="estado">Estado</label>
+            <select id="estado" name="estado" required>
+              <option value="en_curso">En curso</option>
+              <option value="finalizado">Finalizado</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="descripcion">Descripción</label>
+            <textarea id="descripcion" name="descripcion" placeholder="Escribe una breve descripción del manga" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="portada">Portada del Manga</label>
+            <input type="file" id="portada" name="portada" accept=".jpg, .jpeg, .png" required>
+          </div>
+          <div class="form-group">
+            <label for="banner">Banner del Manga</label>
+            <input type="file" id="banner" name="banner" accept=".jpg, .jpeg, .png">
+          </div>
+          <button type="submit" class="btn">Publicar Manga</button>
+        </form>
+      </div>
+    </div>
+    
+    <!-- Sección "Reading" -->
+    <div id="reading" class="section">
+      <main>
+        <section class="manga-banner">
+          <img id="reading-cover" class="cover" src="" alt="Portada del Manga">
+          <div class="manga-info">
+            <div>
+              <h1 id="reading-title"></h1>
+              <div class="details">
+                <span id="reading-author"><strong>Autor:</strong> Autor Updating</span>
+                <span id="reading-genres"><strong>Géneros:</strong> </span>
+                <span id="reading-status"><strong>Estado:</strong> En curso</span>
+              </div>
+            </div>
+            <div class="manga-actions">
+              <!-- El botón "Leer Manga" ahora carga el capítulo 1 -->
+              <a href="#" class="leer-btn" onclick="if(currentMangaTitle){ loadChapter(1); } else { alert('No hay manga seleccionado'); } return false;">Leer Manga</a>
+            </div>
+          </div>
+        </section>
+        <section class="manga-description">
+          <h2>Descripción</h2>
+          <p id="reading-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+          </p>
+        </section>
+        <section class="chapter-list">
+          <h2>Lista de Capítulos</h2>
+          <ul id="reading-chapters">
+            <!-- Se llenará dinámicamente según el manga seleccionado -->
+          </ul>
+        </section>
+        <!-- Sección de Comentarios -->
+        <section class="comments-section">
+          <h2>Comentarios</h2>
+          <div id="comments-container">
+            <!-- Aquí se mostrarán los comentarios -->
+          </div>
+          <div id="comment-form-container">
+            <textarea id="comment-text" placeholder="Escribe tu comentario aquí..."></textarea>
+            <button id="submit-comment" class="btn">Enviar Comentario</button>
+          </div>
+        </section>
+      </main>
+      <button class="back-btn" onclick="showSection('inicio')">Volver</button>
+    </div>
+    
+    <!-- Sección genérica para mostrar un capítulo -->
+    <div id="chapter" class="section">
+      <div class="container">
+        <h2 id="chapter-title">Capítulo</h2>
+        <div class="chapter-images" id="chapter-images">
+          <!-- Aquí se insertarán las imágenes del capítulo -->
+        </div>
+      </div>
+      <button class="back-btn" onclick="showSection('reading')">Volver</button>
+    </div>
+    
+    <!-- Sección Favoritos -->
+    <div id="favoritos" class="section">
+      <h1>Favoritos</h1>
+      <div class="grid" id="favorites-grid">
+        <!-- Se llenará dinámicamente -->
+      </div>
+    </div>
+    
+    <!-- Sección de Ajustes -->
+    <div id="ajustes" class="section">
+      <h1>Ajustes</h1>
+      <form id="ajustes-form">
+        <div class="form-group">
+          <label>Contraseña</label>
+          <p class="note">La longitud de la contraseña debe oscilar entre 4 a 8 dígitos.</p>
+        </div>
+        <div class="form-group">
+          <label for="new-password-ajustes">Nueva contraseña</label>
+          <input type="password" id="new-password-ajustes" required>
+        </div>
+        <div class="form-group">
+          <label for="confirm-new-password">Confirmar nueva contraseña</label>
+          <input type="password" id="confirm-new-password" required>
+        </div>
+        <div class="form-group">
+          <label for="current-password">Contraseña actual</label>
+          <input type="password" id="current-password" required>
+        </div>
+        <button type="submit" class="btn">Guardar</button>
+      </form>
+    </div>
+    
+  </div>
+  
+  <footer>
+    &copy; 2025 Mi Página de Cómics. Todos los derechos reservados.
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>
